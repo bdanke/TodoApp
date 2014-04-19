@@ -1,0 +1,10 @@
+<a href="#/todos/new">New Todo Item</a>
+
+<ul>
+	<% todos.each( function(todo) { %>
+		<li>
+			<%= todo.escape("title") %>
+			<button value="<%= todo.get('id') %>">Finished!</button>
+		</li>
+	<% }) %>
+</ul>
